@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div id="calculator">
+        <div id="display">
+          <div id="digits-history"></div>
+          <div id="digit-entered"></div>
+        </div>
+        <div id="buttons">
+          <div id="equals" className="btn">=</div>
+          <div id="zero" className="btn">0</div>
+          <div id="one" className="btn">1</div>
+          <div id="two" className="btn">2</div>
+          <div id="three" className="btn">3</div>
+          <div id="four" className="btn">4</div>
+          <div id="five" className="btn">5</div>
+          <div id="six" className="btn">6</div>
+          <div id="seven" className="btn">7</div>
+          <div id="eight" className="btn">8</div>
+          <div id="nine" className="btn">9</div>
+          <div id="add" className="btn">+</div>
+          <div id="substract" className="btn">-</div>
+          <div id="multiply" className="btn">x</div>
+          <div id="divide" className="btn">/</div>
+          <div id="decimal" className="btn">.</div>
+          <div id="clear" className="btn">AC</div>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
