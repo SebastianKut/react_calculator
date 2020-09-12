@@ -4,8 +4,8 @@ class Display extends Component {
     render() {
         return (
         <div id="display">
-          <div id="digit-history">20 + 15</div>
-          <div id="digit-entered">20</div>
+          <div id="digit-history">{this.props.input}</div>
+        <div id="digit-entered">{this.props.output}</div>
         </div>
         )
     }
