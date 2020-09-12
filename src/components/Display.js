@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 
 class Display extends Component {
+
+    formatHistory = (string) => {
+     return !parseInt(string.charAt(0), 10) > 0 ? string.slice(1) : string
+    }
+
     render() {
         return (
-        <div id="display">
-          <div id="digit-history">{this.props.input}</div>
-        <div id="digit-entered">{this.props.output}</div>
+        <div id="display-container">
+          <div id="digit-history">{this.formatHistory(this.props.input)}</div>
+        <div id="display">{this.props.output}</div>
         </div>
         )
     }

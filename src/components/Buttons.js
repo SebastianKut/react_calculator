@@ -5,7 +5,7 @@ class Buttons extends Component {
     render() {
         return (
         <div id="buttons">
-            <div id="equals" className="btn" onClick={this.props.handleClick}>=</div>
+            <div id="equals" className="btn" onClick={this.props.calcResult}>=</div>
             <div id="zero" className="btn" onClick={this.props.handleClick}>0</div>
             <div id="one" className="btn" onClick={this.props.handleClick}>1</div>
             <div id="two" className="btn" onClick={this.props.handleClick}>2</div>
@@ -21,7 +21,7 @@ class Buttons extends Component {
             <div id="multiply" className="btn" onClick={this.props.handleClick}>x</div>
             <div id="divide" className="btn" onClick={this.props.handleClick}>/</div>
             <div id="decimal" className="btn" onClick={this.props.handleClick}>.</div>
-            <div id="clear" className="btn" onClick={this.props.handleClick}>C</div>
+            <div id="clear" className="btn" onClick={this.props.clearCalc}>C</div>
         </div> 
         )
     }
