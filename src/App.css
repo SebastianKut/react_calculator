@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+#calculator {
+  background: lightgray;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, 100px);
+  grid-template-areas: 
+  "display display display display"
+  "buttons buttons buttons buttons"
+  "buttons buttons buttons buttons"
+  "buttons buttons buttons buttons"
+  "buttons buttons buttons buttons"
+  "buttons buttons buttons buttons"
+  ;
+}
+
+#buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-template-areas:
+  "clear clear divide multiply"
+  "seven eight nine minus"
+  "four five six plus"
+  "one two three equals"
+  "zero zero decimal equals" 
+  ;
+}
+
+#display {
+  grid-area: display;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 50px);
+  grid-template-areas:
+  "history history history history"
+  "entered entered entered entered"
+  ;
+  background-color: black;
+}
+
+#digit-history {
+  grid-area: history;
+  color: yellow;
+  text-align: end;
+  line-height: 50px;
+  font-size: 1rem;
+}
+
+#digit-entered {
+  grid-area: entered;
+  color: aqua;
+  text-align: end;
+  line-height: 50px;
+  font-size: 3rem;
+}
+
+#equals {
+  grid-area: equals;
+  background-color: blue;
+  line-height: 200px;
+}
+
+#zero {
+  grid-area: zero;
+  background-color: lightsalmon;
+}
+
+#one {
+  grid-area: one;
+  background-color: lightgreen;
+}
+
+#two {
+  grid-area: two;
+  background-color: lightgreen;
+}
+
+#three {
+  grid-area: three;
+  background-color: lightgreen;
+}
+
+#four {
+  grid-area: four;
+  background-color: lightgreen;
+}
+
+#five {
+  grid-area: five;
+  background-color: lightgreen;
+}
+
+#six {
+  grid-area: six;
+  background-color: lightgreen;
+}
+
+#seven {
+  grid-area: seven;
+  background-color: lightgreen;
+}
+
+#eight {
+  grid-area: eight;
+  background-color: lightgreen;
+}
+
+#nine {
+  grid-area: nine;
+  background-color: lightgreen;
+}
+
+#add {
+  grid-area: plus;
+  background-color: lightgreen;
+}
+
+#substract {
+  grid-area: minus;
+  background-color: lightgreen;
+}
+
+#multiply {
+  grid-area: multiply;
+  background-color: lightgreen;
+}
+
+#divide {
+  grid-area: divide;
+  background-color: lightgreen;
+}
+
+#decimal {
+  grid-area: decimal;
+  background-color: lightgreen;
+}
+
+#clear {
+  grid-area: clear;
+  background-color: red;
+}
+
+.btn {
+  border: 0.5px solid gray;
+  text-align: center;
+  line-height: 100px;
+}
+
+.btn:hover {
+  border: 1px solid white;
+}
