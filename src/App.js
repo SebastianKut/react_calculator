@@ -22,9 +22,13 @@ class App extends Component {
   }
 
   updateInput = (e) => {
-    this.setState({
-      input: this.state.input + e.target.textContent
-    })
+    if (e.target.textContent === '.') {
+      this.handleDecimal()
+    } else {
+      this.setState({
+        input: this.state.input + (e.target.textContent === 'x' ? '*' : e.target.textContent)
+      })
+      }
   }
 
   updateOutput = (e) => {
@@ -33,16 +37,27 @@ class App extends Component {
     this.setState({
       output: !parseInt(this.state.output.charAt(0), 10) > 0 ? this.state.output.slice(1) + e.target.textContent : this.state.output + e.target.textContent 
       });
+    } else if (e.target.textContent === '.') {
+      this.handleDecimal()
     } else {
       this.setState({
       output: e.target.textContent 
       })
-    };
+    }
+    ;
   }
 
+  handleDecimal = () => {
+    const currentValue = this.state.output;
+    const includesDecimal = currentValue.includes('.');
+    includesDecimal ? this.setState({output: this.state.output + '', input: this.state.input + ''}) : this.setState({output: this.state.output + '.', input: this.state.input + '.'})
+  }
+
+
   calcResult = (e) => {
+    const result = math.evaluate(this.state.input);
     this.setState({
-      output: `${math.evaluate(this.state.input)}`
+     output: result
     })
   }
 
