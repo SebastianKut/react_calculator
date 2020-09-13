@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 
 class Buttons extends Component {
 
@@ -26,5 +28,11 @@ class Buttons extends Component {
         )
     }
 }
+
+Buttons.propTypes = {
+    calcResult: PropTypes.func.isRequired,
+    handleClick: PropTypes.func.isRequired,
+    clearCalc: PropTypes.func.isRequired
+  }
 
 export default Buttons
